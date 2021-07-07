@@ -3,10 +3,13 @@ version: "3"
 services:
   app:
     container_name: desafio-1
+    image: leormiguel/desafio-1
     build: .
     ports:
       - "8000:8000"
     volumes:
       - .:/go/src/
+    command:
+      sh -c "GOOS=linux go build main.go && ./main"
     extra_hosts:
       - "host.docker.internal:172.17.0.1"

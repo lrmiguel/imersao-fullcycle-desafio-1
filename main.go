@@ -1,6 +1,6 @@
 package main
 
-import "desafio-1/server"
+import "github.com/lrmiguel/imersao-fullcycle-desafio-1/server"
 
 func main() {
 	server.NewWebServer().Serve()

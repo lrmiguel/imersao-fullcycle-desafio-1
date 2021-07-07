@@ -6,8 +6,6 @@ ENV GO111MODULE=on
 ENV CGO_ENABLED=1
 
 RUN apt-get update && \
-    apt-get install build-essential
+    apt-get install build-essential -y
 
 CMD ["tail", "-f", "/dev/null"]
-
-CMD ["GOOS=linux", "go", "build", "main.go"]
